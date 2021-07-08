@@ -1,10 +1,10 @@
-# jmot-lib (JavaScript Manipulation of Time Library)
+# jmot-lib (JavaScript Manipulation of Time Library) :milky_way:
 
 A JavaScript utility library that converts decimal to time.
 
 Sometimes we end up having to work with non-standard time values. For example 1.5 hrs means one and a half hours.
 
-This library aims to make it easy to do manipulations on time.  So that 1.5 hrs becomes 1:30.
+This library aims to make it easy to do manipulations on time.  So that, 1.5 hrs becomes 1:30.
 | Hours    | Time | Hours     | Time  |
 |----------|------|-----------|-------|
 |        0 | 0:00 |        12 | 12:00 |
@@ -21,16 +21,17 @@ This library aims to make it easy to do manipulations on time.  So that 1.5 hrs 
 | 0.916667 | 0:55 | 12.916667 | 12:55 |
 |        1 | 1:00 |        13 | 13:00 |
 
-
+:information_source: *1 hour is equal to 60 mintues.*
 
 ## Usage
 
+### Installation
 
-run:
+using npm:
 
 `npm install jmot-lib`
 
-code usage:
+### Code Example
 
 ESM support:
 
@@ -41,29 +42,31 @@ ESM support:
     // result: 4:30
 
 
+CJS(CommonJS) and UMD(Universal Module Definition) also supported.
 
-CJS and UMD support also available.
+### String -> String
 
-
-
-import
-require
+`dectotime` takes a string as input and outputs a string.
 
 
-### Gotchas
+### Gotchas :facepunch:
 
-- 24 hrs
-- boo oclock
+- #### :clock12: 24 Hour Format
+The api supports up to 24-hour decimal time.  However, it will allow all values.
 
-## Contribute
+- #### :ghost: Boo O'Clock
+`dectotime` takes a string as input. 
 
-Become a contributor to jmot! pr
+    dectotime('boo');
+    // boo:00
 
-Feedback welcome!
+Ensure you validate the value being passed in beforehand.
 
-technologies?
+## Contribute :purple_heart:
 
-Running locally?
-build
-test
+Become a contributor to jmot!
+
+If you've found a bug, please create a new issue or a pull request.
+
+All Feedback welcome! :raising_hand:
 
