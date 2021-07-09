@@ -4,7 +4,9 @@ A JavaScript utility library that converts decimal to time.
 
 Sometimes we end up having to work with non-standard time values. For example 1.5 hrs means one and a half hours.
 
-This library aims to make it easy to do manipulations on time.  So that, 1.5 hrs becomes 1:30.
+This library aims to make it easy to do manipulations on time.  So that, 1.5 hrs becomes 1:30 and where 1.5 + 14:00 returns 15:30.
+
+
 | Hours    | Time | Hours     | Time  |
 |----------|------|-----------|-------|
 |        0 | 0:00 |        12 | 12:00 |
@@ -21,7 +23,7 @@ This library aims to make it easy to do manipulations on time.  So that, 1.5 hrs
 | 0.916667 | 0:55 | 12.916667 | 12:55 |
 |        1 | 1:00 |        13 | 13:00 |
 
-:information_source: *1 hour is equal to 60 mintues.*
+:information_source: *1 hour is equal to 60 minutes.*
 
 ## Usage
 
@@ -40,6 +42,10 @@ ESM support:
     var x = dectotime('4.5');
     console.log('result: ', x);
     // result: 4:30
+
+    var y = adddectotime('1.75','14:00');
+    console.log('result: ', y);
+    // result: 15:45
 
 
 CJS(CommonJS) and UMD(Universal Module Definition) also supported.
@@ -62,11 +68,17 @@ The api supports up to 24-hour decimal time.  However, it will allow all values.
 
 Ensure you validate the value being passed in beforehand.
 
+## Functions
+
+***dectotime*** takes a decimal string as input and returns a string time HH:MM
+
+***adddectotime*** takes two string inputs ('1.0','12:00') a decimal and a time. The two values are summed together and returned as a string.
+
 ## Contribute :purple_heart:
 
 Become a contributor to jmot!
 
 If you've found a bug, please create a new issue or a pull request.
 
-All Feedback welcome! :raising_hand:
+All feedback welcome! :raising_hand:
 
