@@ -65,7 +65,7 @@ var dectotime = function dectotime(dec) {
   return hrs + ':' + mins;
 };
 
-function adddectotime(dec, time) {
+var adddectotime = function adddectotime(dec, time) {
   var _Array = new Array(),
       _Array2 = _slicedToArray(_Array, 3),
       temparr = _Array2[0],
@@ -84,9 +84,9 @@ function adddectotime(dec, time) {
   var condhr = Number(temparr3[0]) > 23 ? condhrcond : Number(temparr3[0]);
   var totaltime = Number(temparr3[1]) > 59 ? Number(condhr) + 1 + ':' + condmin : condhr + ':' + temparr3[1];
   return totaltime;
-}
+};
 
-function currenttime() {
+var currenttime = function currenttime() {
   var x = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'zz';
   var y = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'HH:MM';
 
@@ -109,6 +109,6 @@ function currenttime() {
     var z = y == 'HH:MM:SS' ? p : q;
     return z;
   }
-}
+};
 
 export { adddectotime, currenttime, dectotime };

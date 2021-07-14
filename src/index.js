@@ -8,7 +8,7 @@ const dectotime = dec => {
     )
 }
 
-function adddectotime (dec, time) {
+const adddectotime = (dec, time) => {
     var [temparr, temparr2, temparr3] = new Array;
     var tempest = dectotime(dec);
     temparr = time.split(':');
@@ -28,7 +28,7 @@ function adddectotime (dec, time) {
     )
 }
 
-function currenttime (x='zz', y='HH:MM') {
+const currenttime = (x='zz', y='HH:MM') => {
     if (x == 'HH:MM:SS'){
         return new Date().toLocaleString('zz',( [], { hour: '2-digit', minute: '2-digit', second: '2-digit' })); 
     } else {

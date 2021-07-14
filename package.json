@@ -1,6 +1,6 @@
 {
   "name": "jmot-lib",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "description": "JavaScript time manipulation utility library",
   "main": "dist/jmot-lib.cjs.js",
   "module": "dist/jmot-lib.esm.js",
@@ -22,7 +22,9 @@
     "javascript time library",
     "decimal to time",
     "convert decimal to time",
-    "add decimal to time"
+    "add decimal to time",
+    "gettime",
+    "currenttime"
   ],
   "author": "Stacy-Ann Sinclair",
   "license": "ISC",
