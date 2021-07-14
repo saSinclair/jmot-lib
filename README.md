@@ -1,6 +1,6 @@
 # jmot-lib (JavaScript Manipulation of Time Library) :milky_way:
 
-A JavaScript utility library that converts decimal to time.
+A JavaScript utility library that converts decimal to time, add decimal to time and get current time based on locale.
 
 Sometimes we end up having to work with non-standard time values. For example 1.5 hrs means one and a half hours.
 
