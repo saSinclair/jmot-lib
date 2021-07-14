@@ -28,4 +28,19 @@ function adddectotime (dec, time) {
     )
 }
 
-export {dectotime , adddectotime }
+function currenttime (x='zz', y='HH:MM') {
+    if (x == 'HH:MM:SS'){
+        return new Date().toLocaleString('zz',( [], { hour: '2-digit', minute: '2-digit', second: '2-digit' })); 
+    } else {
+        var p = new Date().toLocaleString(x,( [], { hour: '2-digit', minute: '2-digit', second: '2-digit' }));
+        var q = new Date().toLocaleString(x,( [], { hour: '2-digit', minute: '2-digit' }));
+        var z = ((y  == 'HH:MM:SS') ? p : q );
+
+        return (
+            z
+        )
+    }
+}
+
+
+export { dectotime , adddectotime, currenttime }
