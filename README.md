@@ -37,7 +37,7 @@ using npm:
 
 ESM support:
 
-    import { dectotime } from 'jmot-lib';
+    import { dectotime, adddectotime } from 'jmot-lib';
 
     var x = dectotime('4.5');
     console.log('result: ', x);
@@ -70,9 +70,34 @@ Ensure you validate the value being passed in beforehand.
 
 ## Functions
 
-***dectotime*** takes a decimal string as input and returns a string time HH:MM
-
 ***adddectotime*** takes two string inputs ('1.0','12:00') a decimal and a time. The two values are summed together and returned as a string.
+
+***currenttime*** returns current time based on your locale setting. The default `currenttime()` returns your local short(HH:MM)time in UTC format. 
+
+Optional parameters: `currenttime(_locale_,_timeformat_)`. _locale_(specify a language format and or location) and _timeformat_ Use 'HH:MM:SS' to return a long time.  See examples below:
+
+    import { currenttime } from 'jmot-lib';
+
+    currenttime();
+    // "13:15"
+
+    currenttime('en');
+    // "1:15 PM"
+
+    currenttime('en-GB');
+    // "13:15"
+
+    currenttime('in-ID');
+    // "১:১৫ PM"
+
+    currenttime('en-US', 'HH:MM:SS');
+    // "1:15:03 PM"
+
+List of [supported locales](https://github.com/saSinclair/jmot-lib/tree/main/docs/locales.md) and example outputs.
+
+***dectotime*** takes a decimal string as input and returns a string time HH:MM.
+
+
 
 ## Contribute :purple_heart:
 

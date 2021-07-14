@@ -90,5 +90,31 @@ function adddectotime(dec, time) {
   return totaltime;
 }
 
+function currenttime() {
+  var x = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'zz';
+  var y = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'HH:MM';
+
+  if (x == 'HH:MM:SS') {
+    return new Date().toLocaleString('zz', ({
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit'
+    }));
+  } else {
+    var p = new Date().toLocaleString(x, ({
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit'
+    }));
+    var q = new Date().toLocaleString(x, ({
+      hour: '2-digit',
+      minute: '2-digit'
+    }));
+    var z = y == 'HH:MM:SS' ? p : q;
+    return z;
+  }
+}
+
 exports.adddectotime = adddectotime;
+exports.currenttime = currenttime;
 exports.dectotime = dectotime;
