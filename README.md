@@ -2,6 +2,19 @@
 
 A JavaScript utility library that converts decimal to time, add decimal to time and get current time based on locale.
 
+Give it a whirl on RunKit:
+
+<script src="https://embed.runkit.com" data-element-id="jmot"></script>
+
+<div id="jmot">
+
+var jmot = require("jmot-lib");
+<br />
+jmot.currenttime();</div>
+
+:information_source: *https://npm.runkit.com/jmot-lib*
+
+
 Sometimes we end up having to work with non-standard time values. For example 1.5 hrs means one and a half hours.
 
 This library aims to make it easy to do manipulations on time.  So that, 1.5 hrs becomes 1:30 and where 1.5 + 14:00 returns 15:30.
